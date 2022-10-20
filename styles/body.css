@@ -1,0 +1,42 @@
+html body{
+    width: 100%;
+    margin: 0;
+}
+h1{
+    margin-left: 1%;
+    color: black;
+    transition: 0.4s ease;
+}
+h1:hover{
+    color: red;
+    transition: 0.4s ease;
+}
+h1:active{
+    color:limegreen;
+}
+.main{
+    width: 100%;
+    height: 500px;
+    background-color:lightsalmon;
+}
+.main__title{
+    font-size: 40;
+}
+.footer{
+    width: auto;
+    height: auto;
+    background-color: aqua;
+}
+footer{
+    margin-top: 0px;
+}
+h2{
+    margin-top: opx;
+}
+.title{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+.footer__spis_li{
+
+}
