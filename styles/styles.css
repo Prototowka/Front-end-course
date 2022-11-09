@@ -23,20 +23,13 @@ body{
     left: 0;
     width: 100%;
     height: 147px;
+    backdrop-filter: blur(20px);
     background-color: rgba(222,222,222,0.5);
-}
-
-@supports (backdrop-filter: blur(20px);) {
-    .page-header{
-        backdrop-filter: blur(20px);
-        background-color: rgba(222,222,222,0.5);
-
-    }
 }
 
 .page-header__container{
     box-sizing: border-box;
-    margin: 0 aito;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     max-width: 1414px;
@@ -122,41 +115,65 @@ btn.active{
     width: 202px;
 }
 
-.listing-events__cards{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -30px;
-}
-
-.events-card{
-    display: flex;
-    width: 100%;
-    margin: 0 30px 120px;
-    max-width: 405px;
-    min-width: 280px;
-}
-
-.events-card__link{
+.listing{
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: 1414px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.listing-event__cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.event{
+    padding: 140px 0 100px;
+}
+
+.event__listing{
+    margin-bottom: 100px;
+}
+
+.event-card{
+    display: inline-flex;
+    width: 405px;
+    max-width: 100%;
+    min-width: 280px;
+    margin: 10px;
+}
+
+.event-card__link{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #1F1E1E;
     text-decoration: none;
 }
 
-.events-card__picture{
+.event-card__picture{
     display: block;
-    margin-bottom: 25px;
     position: relative;
+    width: 100%;
+    margin: 0 0 25px;
+    font-size: 0;
+    text-decoration: none;
+    overflow: hidden;
 }
 
-.events-card__picture::before{
+.event-card__picture::after {
     content: "";
     display: block;
-    padding-top: 107.16%;
     width: 100%;
+    padding-top: 107.16%;
 }
 
-.events-card__img{
+.event-card__img{
+    display: block;
     position: absolute;
     z-index: -1;
     top: 0;
@@ -165,3 +182,27 @@ btn.active{
     height: 100%;
     object-fit: cover;
 }
+
+.event-card__title {
+    margin: 0 0 15px;
+    min-height: 66px;
+    color: #1F1E1E;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    text-decoration: underline transparent;
+    transition: color 0.2s, text-decoration-color 0.2s;
+  }
+  .event-card__description {
+    margin: 0 0 auto;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .event-card__time {
+    margin: 15px 0 0;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  
