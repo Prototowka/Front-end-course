@@ -203,6 +203,7 @@ btn.active{
     font-weight: 300;
     font-size: 14px;
     line-height: 19px;
+    display: flex;
   }
 
   
