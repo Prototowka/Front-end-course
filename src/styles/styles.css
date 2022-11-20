@@ -6,14 +6,15 @@ html, body{
 
 body{
     box-sizing: border-box;
+    position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 100px;
+    min-height: 100vh;
     padding-top: 147px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.3;
+    line-height: 1.375;
     color: #1f1e1e;
 }
 
@@ -80,7 +81,7 @@ body{
     flex: 1 0 auto;
 }
 
-.page-footer{
+.page-footer{ 
     flex: 0 0 auto;
 }
 
@@ -126,13 +127,21 @@ btn.active{
     padding-right: 40px;
 }
 
+.listing__events-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -30px -120px;
+  }
+
 .listing-event__cards{
     display: flex;
     flex-wrap: wrap;
+    width: calc(33.3333% - 60px);
+    margin: 0 30px 120px;
 }
 
 .event{
-    padding: 140px 0 100px;
+    padding: 40px 0 150px;
 }
 
 .event__listing{
@@ -203,7 +212,30 @@ btn.active{
     font-weight: 300;
     font-size: 14px;
     line-height: 19px;
-    display: flex;
   }
 
+  .reserve{
+    display: grid;
+    gap: 65px 11%;
+    grid-template-columns: 405px calc(89%-405px);
+    grid-template-areas: 
+        "checks scheme"
+        "order legend";
+        width: 100%;
+  }
+
+  .reserve__checks{
+    grid-area: checks;
+  }
+
+  .reserve__order{
+    grid-area: order;
+  }
+
+  .reserve__scheme{
+    grid-area: scheme;
+  }
   
+  .reserve__legend{
+    grid-area: legend;
+  }
