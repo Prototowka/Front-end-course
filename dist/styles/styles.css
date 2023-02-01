@@ -187,6 +187,9 @@ img {
       flex-wrap: wrap;
   margin: 0 -30px -120px;
 }
+.listing__link {
+  text-decoration: none;
+}
 .reserve {
   display: grid;
   gap: 65px 11%;
